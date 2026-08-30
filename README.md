@@ -26,10 +26,15 @@ A management GUI built with Python and CustomTkinter designed to configure, moni
 Visit the **[Releases](../../releases)** section to choose how you want to run the application:
 
 ### Option 1: Standalone Executable (Out of the Box)
-- Download `ASR-ControlCenter.exe` from the latest release.
-- No Python installation required. Simply right-click `ASR-ControlCenter.exe` and select **Run as Administrator**.
+- **Direct Executable (`ASR-ControlCenter.exe`):** Download and right-click to select **Run as Administrator**. No extraction or Python installation required.
+- **ZIP Archive (`ASR-ControlCenter.zip`):** Contains the standalone `.exe` inside a compressed archive. Recommended if your browser or network blocks direct `.exe` downloads.
 
-### Option 2: Python Script (`.py`)
+### Option 2: Python Script & Launcher Bundle (.zip)
+- Download `ASR-ControlCenter-Source.zip` from the latest release.
+- Extract the archive to get both `ASR-ControlCenter.py` and `Launch-ASR.bat`.
+- Double-click `Launch-ASR.bat` to automatically launch the application with administrative elevation.
+
+### Option 3: Raw Python Script (.py)
 - Best for developers who want to inspect or modify the source code directly.
 - Download `ASR-ControlCenter.py`.
 - **Requirements:** Python 3.8+ and `customtkinter` (`pip install customtkinter`).
