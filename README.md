@@ -27,3 +27,12 @@ Visit the **[Releases](../../releases)** section to download the application:
 
 * **Direct Executable (`ASR-ControlCenter.exe`)** - Download and right-click to select **Run as Administrator**. No extraction or Python installation required.
 * **ZIP Archive (`ASR-ControlCenter.zip`)** - Contains the standalone `.exe` inside a compressed archive. Recommended if your browser or network blocks direct `.exe` downloads.
+
+## For Developers
+If you prefer to run or compile the source code directly:
+1. Ensure Python 3.8+ is installed.
+2. Install the required UI library: `pip install customtkinter`
+3. Run `ASR-ControlCenter.py` with administrative privileges.
+
+## Disclaimer
+This tool modifies advanced Windows security policies and registry keys. While the profiles are designed to be safe, applying strict ASR rules may interfere with some legacy applications or Office macros. Please review the rules before applying them. Use at your own risk.
