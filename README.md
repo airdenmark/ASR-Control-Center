@@ -25,7 +25,7 @@ A management GUI built with Python and CustomTkinter designed to configure, moni
 
 A few things to be aware of before enabling ASR rules:
 
-* **Windows Edition:** Requires Windows 10/11 Pro, Enterprise, or Education — rules are silently ignored on Home edition with no warning.
+* **Windows Edition:** Requires Windows 10/11 Pro, Enterprise, or Education, rules are silently ignored on Home edition with no warning.
 * **Active Antivirus:** Windows Defender must be your primary, active AV. If you use a third-party antivirus, ASR rules will not function regardless of configuration.
 * **Real-time & Cloud Protection:** Real-time protection must be enabled. Additionally, certain rules (such as blocking untrusted executables by prevalence) require Cloud-Delivered Protection to be active.
 * **Administrator Privileges:** Modifying ASR configurations requires full administrative rights on the system.
