@@ -21,17 +21,22 @@ A management GUI built with Python and CustomTkinter designed to configure, moni
 
 ---
 
-### Important Prerequisites & Caveats
+## Prerequisites & Caveats
 
 A few things to be aware of before enabling ASR rules:
 
-* **Windows Edition:** Requires Windows 10/11 Pro, Enterprise, or Education, rules are silently ignored on Home edition with no warning.
+* **Windows Edition:** Requires Windows 10/11 Pro, Enterprise, or Education — rules are silently ignored on Home edition with no warning.
 * **Active Antivirus:** Windows Defender must be your primary, active AV. If you use a third-party antivirus, ASR rules will not function regardless of configuration.
 * **Real-time & Cloud Protection:** Real-time protection must be enabled. Additionally, certain rules (such as blocking untrusted executables by prevalence) require Cloud-Delivered Protection to be active.
 * **Administrator Privileges:** Modifying ASR configurations requires full administrative rights on the system.
 * **Domain Policies:** On domain-joined machines, local settings may be overridden by organizational Group Policy or Intune policies.
 * **Recommended Testing:** Use **Audit** mode first to monitor activity in the logs before switching rules to **Block** mode, ensuring your daily applications are not affected.
-* **Exclusions:** If a rule blocks a legitimate tool or workflow, you can configure exclusions via Windows Security or PowerShell.
+* **Exclusions:** If a rule blocks a legitimate tool or workflow (a false positive), you do not need to disable the rule entirely. You can exclude specific files or directories from ASR enforcement while keeping the rule active for everything else:
+  * **Via Windows Security (GUI):** Go to *Windows Security* $\rightarrow$ *Virus & threat protection* $\rightarrow$ *Manage settings* $\rightarrow$ *Add or remove exclusions*.
+  * **Via PowerShell (Admin):** Run the following command to exclude a specific path:
+    ```powershell
+    Add-MpPreference -AttackSurfaceReductionOnlyExclusions "C:\Path\To\Your\Folder\"
+    ```
 
 ---
 
